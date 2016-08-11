@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="794.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainFrame.Main.MainController">
+   <bottom>
+      <HBox prefHeight="28.0" prefWidth="600.0" style="-fx-background-color: red;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" styleClass="fileMenu" text="File">
+               <items>
+                  <Menu mnemonicParsing="false" text="New">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#newProjectAction" text="New Project" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                      <MenuItem id="university" mnemonicParsing="false" onAction="#newUniversity" text="University" />
+                        <MenuItem id="course" mnemonicParsing="false" onAction="#newCourse" text="Course" />
+                        <MenuItem id="subject" mnemonicParsing="false" onAction="#newSubject" text="Subject" />
+                        <MenuItem mnemonicParsing="false" onAction="#newExamList" text="Exam List" />
+                        <MenuItem id="holidayList" mnemonicParsing="false" text="Holiday List" />
+                    </items>
+                  </Menu>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Save" />
+                  <MenuItem mnemonicParsing="false" text="Save As" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Open" />
+                  <MenuItem mnemonicParsing="false" text="Close All" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Settings" />
+                  <MenuItem mnemonicParsing="false" onAction="#closeWindow" styleClass="closeWindow" text="Exit" />
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Undo" />
+                  <MenuItem mnemonicParsing="false" text="Redo" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Cut" />
+                  <MenuItem mnemonicParsing="false" text="Copy" />
+                  <MenuItem mnemonicParsing="false" text="Paste" />
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="View">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Tool Bar" />
+                  <MenuItem mnemonicParsing="false" text="Status Bar" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Generate">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Academic Calender" />
+                  <MenuItem mnemonicParsing="false" text="Semester TimeTable" />
+                  <MenuItem mnemonicParsing="false" text="Course TimeTable" />
+                  <MenuItem mnemonicParsing="false" text="Subject TimeTable" />
+                  <MenuItem mnemonicParsing="false" text="Holiday List" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Getting Started" />
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <SplitPane dividerPositions="0.2537878787878788" prefHeight="160.0" prefWidth="200.0" stylesheets="@../../css/styles.css" BorderPane.alignment="CENTER">
+               <items>
+                  <TreeTableView fx:id="treeTableView" stylesheets="@../../css/styles.css" SplitPane.resizableWithParent="false" />
+                  <TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="ALL_TABS" />
+               </items>
+            </SplitPane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>

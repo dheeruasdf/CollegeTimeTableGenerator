@@ -1,0 +1,29 @@
+/*
+ * =========== MenuBar ===========
+ */
+.leftAnchorPane {
+    -fx-background-color: blue;
+}
+.split-pane-divider {
+    -fx-background-color: transparent;
+}
+
+
+/*
+ * ========== Split Pane =========
+ */
+.split-pane-divider {
+    -fx-padding: 0.05em;
+}
+
+.column-header-background > .nested-column-header > .table-column {
+    -fx-pref-height: 30px;
+}
+
+.initialButton {
+    -fx-background-color: none;
+}
+
+.initialImage {
+    -fx-alignment: left;
+}
